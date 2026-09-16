@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply bg-dark text-accent font-sans overflow-x-hidden selection:bg-accent selection:text-dark;
+    background-color: #050505;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-dark-lighter border border-dark-border rounded-none;
+  }
+  
+  .btn-primary {
+    @apply relative overflow-hidden bg-accent text-dark px-8 py-4 rounded-full font-sans font-medium uppercase tracking-widest text-sm transition-transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply relative overflow-hidden bg-transparent border border-dark-border text-accent px-8 py-4 rounded-full font-sans font-medium uppercase tracking-widest text-sm transition-all hover:bg-accent hover:text-dark;
+  }
+
+  /* Minimalist border for inputs */
+  .input-field {
+    @apply w-full bg-dark-lighter border border-dark-border rounded-none px-4 py-4 text-white focus:outline-none focus:border-accent transition-colors;
+  }
+}
+
+/* Custom Scrollbar minimal */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CCFF00;
+}
+
+/* Base custom cursor handled by JS */
+.cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #CCFF00;
+  border-radius: 50%;
+  z-index: 9999;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cursor-dot {
+    display: none;
+  }
+}
