@@ -105,10 +105,10 @@ const HeroSection = () => {
             transition={{ delay: 1 }}
             className="flex flex-col space-y-1"
           >
-            <p className="text-accent font-sans text-xs uppercase tracking-[0.3em] font-bold">Azeem Noor</p>
-            <p className="text-gray-400 font-sans text-xs uppercase tracking-widest max-w-[200px]">
-              Crafting immersive digital experiences through code.
-            </p>
+            <div className="flex flex-col gap-4 text-xs md:text-sm font-sans text-gray-400 uppercase tracking-widest max-w-[200px]">
+              <p>AZEEM NOOR</p>
+              <p className="opacity-50 lowercase normal-case tracking-normal">Fullstack developer with high level of experience in web designing and development. Interested to explore beautiful Tech-World.</p>
+            </div>
           </motion.div>
 
           <motion.div 
