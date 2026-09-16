@@ -53,20 +53,26 @@ const HeroSection = () => {
         {/* Layer 1: Background Outlined Text (Behind Image) */}
         <motion.div 
           style={{ x: x1 }}
-          className="absolute top-1/4 md:top-[15%] w-full flex justify-center z-10 pointer-events-none opacity-40"
+          className="absolute top-1/4 md:top-[15%] w-full flex justify-center z-10 pointer-events-none opacity-40 overflow-hidden"
         >
-          <h1 
+          <motion.h1 
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            transition={{ duration: 1.5, ease: [0.77, 0, 0.175, 1], delay: 0.2 }}
             className="text-[25vw] md:text-[20vw] font-display font-black leading-none uppercase text-transparent"
             style={{ WebkitTextStroke: '2px var(--color-white, #F8FAFC)' }}
           >
             CREATIVE
-          </h1>
+          </motion.h1>
         </motion.div>
 
         {/* Layer 2: Interactive Floating Image (Middle) */}
         <motion.div 
+          initial={{ clipPath: "inset(50% 50% 50% 50% round 200px)" }}
+          animate={{ clipPath: "inset(0% 0% 0% 0% round 200px)" }}
+          transition={{ duration: 1.5, ease: [0.77, 0, 0.175, 1], delay: 0.5 }}
           style={{ scale: imageScale, y: imageY, x: mousePosition.x, rotateY: mousePosition.x / 2, rotateX: -mousePosition.y / 2 }}
-          className="absolute z-20 w-[60vw] h-[40vh] md:w-[25vw] md:h-[60vh] rounded-[200px] overflow-hidden shadow-2xl border-2 border-dark-border"
+          className="absolute z-20 w-[60vw] h-[40vh] md:w-[25vw] md:h-[60vh] overflow-hidden shadow-2xl border-2 border-dark-border"
         >
           <div className="absolute inset-0 bg-accent/20 mix-blend-overlay z-10 pointer-events-none group-hover:opacity-0 transition-opacity duration-500"></div>
           <img 
@@ -79,11 +85,16 @@ const HeroSection = () => {
         {/* Layer 3: Foreground Solid Text (In Front of Image) */}
         <motion.div 
           style={{ x: x2 }}
-          className="absolute bottom-1/4 md:bottom-[15%] w-full flex justify-center z-30 pointer-events-none"
+          className="absolute bottom-1/4 md:bottom-[15%] w-full flex justify-center z-30 pointer-events-none overflow-hidden"
         >
-          <h1 className="text-[25vw] md:text-[20vw] font-display font-black leading-none uppercase text-white mix-blend-exclusion">
+          <motion.h1 
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            transition={{ duration: 1.5, ease: [0.77, 0, 0.175, 1], delay: 0.4 }}
+            className="text-[25vw] md:text-[20vw] font-display font-black leading-none uppercase text-white mix-blend-exclusion"
+          >
             DEVELOPER
-          </h1>
+          </motion.h1>
         </motion.div>
 
         {/* Layer 4: Meta info and scrolling indicator */}

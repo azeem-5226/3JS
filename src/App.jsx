@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import CustomCursor from './components/CustomCursor';
+import NoiseOverlay from './components/NoiseOverlay';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -37,6 +38,7 @@ function App() {
   return (
     <Router>
       <CustomCursor />
+      <NoiseOverlay />
       <div className="flex flex-col min-h-screen bg-dark text-accent selection:bg-accent selection:text-dark">
         <Navbar />
         <main className="flex-grow">
