@@ -5,7 +5,7 @@
 @layer base {
   html, body {
     @apply bg-dark text-accent font-sans overflow-x-hidden selection:bg-accent selection:text-dark;
-    background-color: #050505;
+    background-color: #020617;
   }
 }
 
@@ -33,13 +33,13 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #020617;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2A2A2A;
+  background: #1E293B;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #CCFF00;
+  background: #06B6D4;
 }
 
 /* Base custom cursor handled by JS */
@@ -51,7 +51,7 @@
   transform: translate(-50%, -50%);
   width: 12px;
   height: 12px;
-  background-color: #CCFF00;
+  background-color: #06B6D4;
   border-radius: 50%;
   z-index: 9999;
   transition: opacity 0.3s ease-in-out;

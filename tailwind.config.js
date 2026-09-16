@@ -8,28 +8,27 @@ export default {
     extend: {
       colors: {
         dark: {
-          DEFAULT: '#050505', // Pure deep black
-          lighter: '#121212', // Slightly lighter for cards
-          card: '#121212',
-          border: '#2A2A2A'   // Sharp, dark borders
+          DEFAULT: '#020617', // Slate 950 (Deep Space Blue/Black)
+          lighter: '#0F172A', // Slate 900
+          card: '#0F172A',
+          border: '#1E293B'   // Slate 800
         },
         accent: {
-          DEFAULT: '#CCFF00', // Neon Lime / Cyberpunk Green
-          hover: '#D4FF33'    // Lighter neon
+          DEFAULT: '#06B6D4', // Electric Cyan
+          hover: '#22D3EE'    // Lighter Cyan
         },
-        // Standard mapping for dark mode
-        white: '#FFFFFF',
-        black: '#050505',
+        white: '#F8FAFC',     // Crisp White
+        black: '#020617',
         gray: {
-          300: '#A3A3A3',
-          400: '#737373',
-          500: '#525252',
-          600: '#404040',
+          300: '#94A3B8',
+          400: '#64748B',
+          500: '#475569',
+          600: '#334155',
         }
       },
       fontFamily: {
         sans: ['"DM Sans"', 'sans-serif'],
-        display: ['"Playfair Display"', '"Clash Display"', 'serif'] // Clash display works perfectly for this
+        display: ['"Playfair Display"', '"Clash Display"', 'serif'] 
       }
     },
   },

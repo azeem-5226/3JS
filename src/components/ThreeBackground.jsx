@@ -15,7 +15,7 @@ const AbstractShape = () => {
 
   return (
     <TorusKnot ref={meshRef} args={[9, 3, 256, 32]} position={[0, 0, -10]}>
-      <meshStandardMaterial color="#CCFF00" wireframe opacity={0.2} transparent />
+      <meshStandardMaterial color="#06B6D4" wireframe opacity={0.2} transparent />
     </TorusKnot>
   );
 };
